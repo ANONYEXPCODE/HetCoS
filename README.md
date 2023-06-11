@@ -110,7 +110,7 @@ The performances of R-CodeEdge, R-SibEdge, R-DFG, R-Het and V-AST illustrate the
   (2) In R-Het variant, since the HCG becomes a homogeneous graph, we only use one-step aggregation. The aggregation function is "mean" (not "sum"), which is the same as that in the HetCoS's first-step aggregation. It is reasonable because the homogeneous graph can be regarded as a special heterogeneous graph with only one edge type. In fact, we have also conducted the experiment by replacing the "mean" function in R-Het with "sum". The result shows that the performance of R-Het drops significantly with "sum" used (only **48.73/32.50/59.86%** and **34.28/23.94/47.75%** on the Java and Python datasets).
 </em></font>
 
-<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/ablation_study.png" width="70%" height="80%" alt="Ablation Study">
+<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/ablation_study.png" width="80%" height="80%" alt="Ablation Study">
 
 - Detailed results of study on the model size
 
