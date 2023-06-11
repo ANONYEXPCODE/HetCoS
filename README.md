@@ -75,7 +75,7 @@ python s3_eval_cleaned_test_set.py"
 ## Parameter Settings
 - The main parameter settings for HetCoS are shown as:
 
-<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/parameter_setting_new.png" width="50%" height="50%" alt="params">
+<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/parameter_setting.png" width="50%" height="50%" alt="params">
 
 In the experiment, the number of nodes of an HCG is subject to both the maximum HCG size and maximum source code length. The two maximum values, as well as the maximum summary text length are set based on the statistics of HCG sizes, code lengths, and summary lengths, which are presented in the boxplots above. For each boxplot, we select the value at the maximum point as the corresponding maximum value, which is reasonable considering the statistics property.
 For example, in a Java HCG, the number of its nodes should not be more than 473, and the number of its leaf nodes (source code tokens) cannot be more than 321. If not, the graph should be truncated.
@@ -95,7 +95,7 @@ Considering there have been many BLEU variants that may affect the evaluation, w
 We provide part of our experimental result below.
 - Comparison with 16 state-of-the-arts, including 12 models without pre-training and 4 pre-training-based models.
 
-<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/SOTA_new.png" width="80%" height="80%" alt="Comparison with the baselines">
+<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/SOTA.png" width="80%" height="80%" alt="Comparison with the baselines">
 
 <font color=FireBrick><em>
 
@@ -110,15 +110,15 @@ The performances of R-CodeEdge, R-SibEdge, R-DFG, R-Het and V-AST illustrate the
   (2) In R-Het variant, since the HCG becomes a homogeneous graph, we only use one-step aggregation. The aggregation function is "mean" (not "sum"), which is the same as that in the HetCoS's first-step aggregation. It is reasonable because the homogeneous graph can be regarded as a special heterogeneous graph with only one edge type. In fact, we have also conducted the experiment by replacing the "mean" function in R-Het with "sum". The result shows that the performance of R-Het drops significantly with "sum" used (only **48.73/32.50/59.86%** and **34.28/23.94/47.75%** on the Java and Python datasets).
 </em></font>
 
-<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/ablation_study.png" width="70%" height="70%" alt="Ablation Study">
+<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/ablation_study.png" width="70%" height="80%" alt="Ablation Study">
 
 - Detailed results of study on the model size
 
-<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/performance_wrt_enc_layer.png" width="70%" height="70%" alt="HCG_layers">
+<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/performance_wrt_enc_layer.png" width="80%" height="80%" alt="HCG_layers">
 
-<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/performance_wrt_dec_layer.png" width="70%" height="70%" alt="sum_layers">
+<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/performance_wrt_dec_layer.png" width="80%" height="80%" alt="sum_layers">
 
-<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/performance_wrt_emb_size.png" width="70%" height="70%" alt="emb_sizes">
+<img src="https://github.com/ANONYEXPCODE/IMG/blob/main/HETCOS/performance_wrt_emb_size.png" width="80%" height="80%" alt="emb_sizes">
 
 - Qualitative examples on the Java and Python datasets.
     
